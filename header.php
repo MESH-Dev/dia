@@ -49,9 +49,9 @@
 	<header>
 		<div class="container">
 
-			<div class="columns-12">
+			<!-- <div class="columns-12"> -->
 				<div class="logo">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<!-- <h1 class="site-title"><a href="<//?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><//?php bloginfo( 'name' ); ?></a></h1> -->
 				</div>
 				<nav class="main-navigation">
 					<?php if(has_nav_menu('main_nav')){
@@ -77,7 +77,7 @@
 								echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
 							} ?>
 				</nav>
-			</div>
+			<!-- </div> -->
 
 		</div>
 	</header>

@@ -15,7 +15,14 @@ $bp-smaller-than-mobile : "max-width: 480px" !default;
 $bp-smaller-than-phablet   : "max-width: 550px" !default;
 
 // Colors
-$red: #a42126 !default;
+$red: #a81704 !default;
+$red-rgba: rgba(168,23,4,0.5) !default;
+$deepblue: #1C1950 !default;
+$blue: #4472C4 !default;
+$blue-rgba: rgba(68,114,196,0.5) !default;
+$lightgrey: #C7C8CA !default;
+$grey: #9b9b9b !default;
+$deepred: #630909 !default;
 $white: #FFFFFF !default;
 $black: #000000 !default;
 
@@ -26,3 +33,4 @@ $proxima: "proxima-nova",sans-serif;
 
 // Misc
 //$global-radius: 4px !default;
+$padding: 80px !default;

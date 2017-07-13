@@ -353,7 +353,8 @@ h3 {
 
 /* line 13, sass/base/_typography.scss */
 h4 {
-  font-size: 2.4rem;
+  font-size: 5.4rem;
+  font-weight: 700;
 }
 
 /* line 14, sass/base/_typography.scss */
@@ -374,7 +375,7 @@ h6 {
 
   /* line 20, sass/base/_typography.scss */
   h2 {
-    font-size: 4.2rem;
+    font-size: 4rem;
   }
 
   /* line 21, sass/base/_typography.scss */
@@ -563,7 +564,7 @@ p {
 .row [class*='columns-']:last-of-type {
   padding-right: 0;
 }
-@media (max-width: 750px) {
+@media (max-width: 960px) {
   /* line 69, sass/base/_grid.scss */
   [class*='columns-'] {
     width: 100%;
@@ -591,10 +592,20 @@ p {
   background-color: rgba(168, 23, 4, 0.5);
   overflow: hidden;
   position: relative;
-  padding: 8rem;
+  padding: 80px 80px 20px 80px;
+}
+/* line 17, sass/modules/_modules.scss */
+.hero h3 {
+  margin: 4rem 0;
+}
+@media screen and (max-width: 1060px) {
+  /* line 2, sass/modules/_modules.scss */
+  .hero {
+    padding: 80px 40px 20px 40px;
+  }
 }
 
-/* line 19, sass/modules/_modules.scss */
+/* line 27, sass/modules/_modules.scss */
 .bg-image {
   position: absolute;
   z-index: -1;
@@ -606,54 +617,139 @@ p {
   filter: grayscale(1);
 }
 
-/* line 30, sass/modules/_modules.scss */
+/* line 38, sass/modules/_modules.scss */
 svg.main-logo {
   height: 215px;
 }
-
-/* line 37, sass/modules/_modules.scss */
-svg.scroll-cta {
-  width: 44px;
+@media screen and (max-width: 480px) {
+  /* line 38, sass/modules/_modules.scss */
+  svg.main-logo {
+    height: 170px;
+    margin-top: 140px;
+  }
 }
 
-/* line 43, sass/modules/_modules.scss */
+/* line 46, sass/modules/_modules.scss */
+svg.scroll-cta {
+  width: 36px;
+}
+
+/* line 52, sass/modules/_modules.scss */
 .text-panel {
   padding: 8rem;
   position: relative;
 }
-/* line 46, sass/modules/_modules.scss */
+@media screen and (max-width: 1060px) {
+  /* line 52, sass/modules/_modules.scss */
+  .text-panel {
+    padding: 6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 52, sass/modules/_modules.scss */
+  .text-panel {
+    padding: 4rem;
+  }
+}
+/* line 61, sass/modules/_modules.scss */
 .text-panel.white {
   background-color: #FFFFFF;
   color: #9b9b9b;
 }
-/* line 49, sass/modules/_modules.scss */
+/* line 64, sass/modules/_modules.scss */
 .text-panel.white h1, .text-panel.white h2, .text-panel.white h3, .text-panel.white h4, .text-panel.white h5, .text-panel.white h6 {
   color: #1C1950;
+  margin-bottom: 0;
 }
-/* line 53, sass/modules/_modules.scss */
+/* line 69, sass/modules/_modules.scss */
 .text-panel.blue {
   background-color: #4472C4;
   color: #FFFFFF;
 }
-/* line 57, sass/modules/_modules.scss */
+/* line 73, sass/modules/_modules.scss */
 .text-panel.bg-image-blue {
   background-color: rgba(68, 114, 196, 0.5);
   color: #FFFFFF;
 }
-/* line 60, sass/modules/_modules.scss */
+/* line 76, sass/modules/_modules.scss */
 .text-panel.bg-image-blue h3 {
   font-size: 6.4rem;
 }
-/* line 63, sass/modules/_modules.scss */
+@media screen and (max-width: 750px) {
+  /* line 76, sass/modules/_modules.scss */
+  .text-panel.bg-image-blue h3 {
+    font-size: 3.6rem;
+  }
+}
+/* line 82, sass/modules/_modules.scss */
 .text-panel.bg-image-blue p {
   font-size: 24px;
   font-weight: 500;
-  font-weight: 700;
+}
+/* line 87, sass/modules/_modules.scss */
+.text-panel.flex-centered {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 }
 
-/* line 71, sass/modules/_modules.scss */
+/* line 111, sass/modules/_modules.scss */
 .centered-heading {
   text-align: center;
+}
+
+/* line 117, sass/modules/_modules.scss */
+.flex-slider {
+  width: 100%;
+  margin: 40px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+/* line 130, sass/modules/_modules.scss */
+.flex-slider i.fa {
+  font-size: 64px;
+  margin: 0 40px;
+  line-height: 74px;
+}
+
+/* line 137, sass/modules/_modules.scss */
+.indiv-logo {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  margin: 0 20px;
+  background-color: #9b9b9b;
+}
+@media screen and (max-width: 750px) {
+  /* line 143, sass/modules/_modules.scss */
+  .indiv-logo.drop {
+    display: none;
+  }
 }
 
 /* line 4, sass/modules/_buttons.scss */
@@ -689,17 +785,18 @@ button:active span {
   transform: translateY(2px);
 }
 
-/* line 43, sass/modules/_buttons.scss */
+/* line 42, sass/modules/_buttons.scss */
+i.fa {
+  font-size: 2.4rem;
+}
+
+/* line 47, sass/modules/_buttons.scss */
 input[type="submit"], input[type="reset"], input[type="button"] {
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
+  min-height: 44px;
+  font-size: 2.4rem;
+  border: 0px;
+  font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
@@ -707,61 +804,61 @@ input[type="submit"], input[type="reset"], input[type="button"] {
   box-sizing: border-box;
 }
 
-/* line 66, sass/modules/_buttons.scss */
+/* line 71, sass/modules/_buttons.scss */
 .button:hover,
 button:hover {
   outline: 0;
 }
 
-/* line 74, sass/modules/_buttons.scss */
+/* line 79, sass/modules/_buttons.scss */
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
   outline: 0;
 }
 
-/* line 83, sass/modules/_buttons.scss */
+/* line 88, sass/modules/_buttons.scss */
 .button:focus,
 button:focus {
   outline: 0;
 }
 
-/* line 91, sass/modules/_buttons.scss */
+/* line 96, sass/modules/_buttons.scss */
 input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
   outline: 0;
 }
 
-/* line 100, sass/modules/_buttons.scss */
+/* line 105, sass/modules/_buttons.scss */
 .button.button-primary,
 button.button-primary {
   color: #fff;
 }
 
-/* line 108, sass/modules/_buttons.scss */
+/* line 113, sass/modules/_buttons.scss */
 input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
   color: #fff;
 }
 
-/* line 117, sass/modules/_buttons.scss */
+/* line 122, sass/modules/_buttons.scss */
 .button.button-primary:hover,
 button.button-primary:hover {
   color: #fff;
 }
 
-/* line 125, sass/modules/_buttons.scss */
+/* line 130, sass/modules/_buttons.scss */
 input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover {
   color: #fff;
 }
 
-/* line 134, sass/modules/_buttons.scss */
+/* line 139, sass/modules/_buttons.scss */
 .button.button-primary:focus,
 button.button-primary:focus {
   color: #fff;
 }
 
-/* line 142, sass/modules/_buttons.scss */
+/* line 147, sass/modules/_buttons.scss */
 input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {
   color: #fff;
 }
-/* line 149, sass/modules/_buttons.scss */
+/* line 154, sass/modules/_buttons.scss */
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
   height: 38px;
   padding: 6px 10px;
@@ -771,6 +868,38 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 }
 
 /* line 4, sass/modules/_forms.scss */
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
+  color: #1C1950;
+  font-weight: 700;
+  width: 100%;
+  border: 0px;
+  font-size: 2.4rem;
+  min-height: 44px;
+  height: 60px;
+  margin: 10px 0;
+}
+/* line 19, sass/modules/_forms.scss */
+input[type="email"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #1C1950;
+}
+/* line 22, sass/modules/_forms.scss */
+input[type="email"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="password"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #1C1950;
+}
+/* line 25, sass/modules/_forms.scss */
+input[type="email"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #1C1950;
+}
+/* line 28, sass/modules/_forms.scss */
+input[type="email"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="text"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="url"]:-moz-placeholder, input[type="password"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #1C1950;
+}
+
+/* line 35, sass/modules/_forms.scss */
 textarea,
 select {
   height: 38px;
@@ -780,14 +909,14 @@ select {
   box-sizing: border-box;
 }
 
-/* line 17, sass/modules/_forms.scss */
+/* line 48, sass/modules/_forms.scss */
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-/* line 30, sass/modules/_forms.scss */
+/* line 61, sass/modules/_forms.scss */
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -797,18 +926,18 @@ textarea {
   padding-bottom: 6px;
 }
 
-/* line 40, sass/modules/_forms.scss */
+/* line 71, sass/modules/_forms.scss */
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
   outline: 0;
 }
 
-/* line 52, sass/modules/_forms.scss */
+/* line 83, sass/modules/_forms.scss */
 textarea:focus,
 select:focus {
   outline: 0;
 }
 
-/* line 58, sass/modules/_forms.scss */
+/* line 89, sass/modules/_forms.scss */
 label,
 legend {
   display: block;
@@ -816,18 +945,18 @@ legend {
   font-weight: 600;
 }
 
-/* line 65, sass/modules/_forms.scss */
+/* line 96, sass/modules/_forms.scss */
 fieldset {
   padding: 0;
   border-width: 0;
 }
 
-/* line 71, sass/modules/_forms.scss */
+/* line 102, sass/modules/_forms.scss */
 input[type="checkbox"], input[type="radio"] {
   display: inline;
 }
 
-/* line 77, sass/modules/_forms.scss */
+/* line 108, sass/modules/_forms.scss */
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
@@ -891,25 +1020,80 @@ td:last-child {
 .main-navigation {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
   z-index: 2;
+  padding: 20px;
 }
-/* line 5, sass/modules/_header.scss */
+/* line 9, sass/modules/_header.scss */
 .main-navigation ul {
+  display: inline-block;
   list-style-type: none;
   width: 100%;
   text-align: center;
 }
-/* line 9, sass/modules/_header.scss */
+/* line 14, sass/modules/_header.scss */
 .main-navigation ul li {
   display: inline-block;
   color: #FFFFFF;
-  font-size: 2.4rem;
+  margin: 0 20px;
 }
-/* line 13, sass/modules/_header.scss */
+/* line 18, sass/modules/_header.scss */
+.main-navigation ul li:nth-of-type(2) {
+  margin-right: 12%;
+}
+@media screen and (min-width: 1200px) {
+  /* line 18, sass/modules/_header.scss */
+  .main-navigation ul li:nth-of-type(2) {
+    margin-right: 170px;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 18, sass/modules/_header.scss */
+  .main-navigation ul li:nth-of-type(2) {
+    margin-right: 20px;
+  }
+}
+/* line 27, sass/modules/_header.scss */
+.main-navigation ul li:nth-of-type(3) {
+  margin-left: 12%;
+}
+@media screen and (min-width: 1200px) {
+  /* line 27, sass/modules/_header.scss */
+  .main-navigation ul li:nth-of-type(3) {
+    margin-left: 170px;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* line 27, sass/modules/_header.scss */
+  .main-navigation ul li:nth-of-type(3) {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 14, sass/modules/_header.scss */
+  .main-navigation ul li {
+    margin: 20px 0;
+    width: 100%;
+    display: block;
+  }
+  /* line 40, sass/modules/_header.scss */
+  .main-navigation ul li:nth-of-type(2) {
+    margin-right: auto;
+  }
+  /* line 43, sass/modules/_header.scss */
+  .main-navigation ul li:nth-of-type(3) {
+    margin-left: auto;
+  }
+}
+/* line 47, sass/modules/_header.scss */
 .main-navigation ul li a {
   color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-/* line 15, sass/modules/_header.scss */
+/* line 51, sass/modules/_header.scss */
 .main-navigation ul li a:hover {
   text-decoration: none;
 }
@@ -921,10 +1105,20 @@ td:last-child {
   background-color: rgba(168, 23, 4, 0.5);
   overflow: hidden;
   position: relative;
-  padding: 8rem;
+  padding: 80px 80px 20px 80px;
+}
+/* line 17, sass/modules/_modules.scss */
+.hero h3 {
+  margin: 4rem 0;
+}
+@media screen and (max-width: 1060px) {
+  /* line 2, sass/modules/_modules.scss */
+  .hero {
+    padding: 80px 40px 20px 40px;
+  }
 }
 
-/* line 19, sass/modules/_modules.scss */
+/* line 27, sass/modules/_modules.scss */
 .bg-image {
   position: absolute;
   z-index: -1;
@@ -936,52 +1130,137 @@ td:last-child {
   filter: grayscale(1);
 }
 
-/* line 30, sass/modules/_modules.scss */
+/* line 38, sass/modules/_modules.scss */
 svg.main-logo {
   height: 215px;
 }
-
-/* line 37, sass/modules/_modules.scss */
-svg.scroll-cta {
-  width: 44px;
+@media screen and (max-width: 480px) {
+  /* line 38, sass/modules/_modules.scss */
+  svg.main-logo {
+    height: 170px;
+    margin-top: 140px;
+  }
 }
 
-/* line 43, sass/modules/_modules.scss */
+/* line 46, sass/modules/_modules.scss */
+svg.scroll-cta {
+  width: 36px;
+}
+
+/* line 52, sass/modules/_modules.scss */
 .text-panel {
   padding: 8rem;
   position: relative;
 }
-/* line 46, sass/modules/_modules.scss */
+@media screen and (max-width: 1060px) {
+  /* line 52, sass/modules/_modules.scss */
+  .text-panel {
+    padding: 6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 52, sass/modules/_modules.scss */
+  .text-panel {
+    padding: 4rem;
+  }
+}
+/* line 61, sass/modules/_modules.scss */
 .text-panel.white {
   background-color: #FFFFFF;
   color: #9b9b9b;
 }
-/* line 49, sass/modules/_modules.scss */
+/* line 64, sass/modules/_modules.scss */
 .text-panel.white h1, .text-panel.white h2, .text-panel.white h3, .text-panel.white h4, .text-panel.white h5, .text-panel.white h6 {
   color: #1C1950;
+  margin-bottom: 0;
 }
-/* line 53, sass/modules/_modules.scss */
+/* line 69, sass/modules/_modules.scss */
 .text-panel.blue {
   background-color: #4472C4;
   color: #FFFFFF;
 }
-/* line 57, sass/modules/_modules.scss */
+/* line 73, sass/modules/_modules.scss */
 .text-panel.bg-image-blue {
   background-color: rgba(68, 114, 196, 0.5);
   color: #FFFFFF;
 }
-/* line 60, sass/modules/_modules.scss */
+/* line 76, sass/modules/_modules.scss */
 .text-panel.bg-image-blue h3 {
   font-size: 6.4rem;
 }
-/* line 63, sass/modules/_modules.scss */
+@media screen and (max-width: 750px) {
+  /* line 76, sass/modules/_modules.scss */
+  .text-panel.bg-image-blue h3 {
+    font-size: 3.6rem;
+  }
+}
+/* line 82, sass/modules/_modules.scss */
 .text-panel.bg-image-blue p {
   font-size: 24px;
   font-weight: 500;
-  font-weight: 700;
+}
+/* line 87, sass/modules/_modules.scss */
+.text-panel.flex-centered {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 }
 
-/* line 71, sass/modules/_modules.scss */
+/* line 111, sass/modules/_modules.scss */
 .centered-heading {
   text-align: center;
+}
+
+/* line 117, sass/modules/_modules.scss */
+.flex-slider {
+  width: 100%;
+  margin: 40px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+/* line 130, sass/modules/_modules.scss */
+.flex-slider i.fa {
+  font-size: 64px;
+  margin: 0 40px;
+  line-height: 74px;
+}
+
+/* line 137, sass/modules/_modules.scss */
+.indiv-logo {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  margin: 0 20px;
+  background-color: #9b9b9b;
+}
+@media screen and (max-width: 750px) {
+  /* line 143, sass/modules/_modules.scss */
+  .indiv-logo.drop {
+    display: none;
+  }
 }

@@ -5,7 +5,7 @@
    background-color: $red-rgba;
    overflow: hidden;
    position: relative;
-   padding: 8rem;
+   padding: 80px 80px 20px 80px;
    // overflow: hidden;
    // .hero-filter{
    //    position: absolute;
@@ -13,6 +13,14 @@
    //    bottom: 0;
    //    left: 0;
    //    right: 0;
+   // }
+   h3{
+      margin: 4rem 0;
+   }
+   @media screen and ($bp-smaller-than-desktop){
+      padding: 80px 40px 20px 40px;
+   }
+   // @media screen and ($bp-smaller-than-mobile){
    // }
 }
 
@@ -29,13 +37,14 @@
 
 svg.main-logo{
    height: 215px;
-   // path{
-   //    fill: $white;
-   // }
+   @media screen and ($bp-smaller-than-mobile){
+      height: 170px;
+      margin-top: 140px;
+   }
 }
 
 svg.scroll-cta{
-   width: 44px;
+   width: 36px;
 }
 //Homepage hero
 
@@ -43,11 +52,18 @@ svg.scroll-cta{
 .text-panel{
    padding: 8rem;
    position: relative;
+   @media screen and ($bp-smaller-than-desktop){
+      padding: 6rem;
+   }
+   @media screen and ($bp-smaller-than-mobile){
+      padding: 4rem;
+   }
    &.white{
       background-color: $white;
       color: $grey;
       h1,h2,h3,h4,h5,h6{
          color: $deepblue;
+         margin-bottom: 0;
       }
    }
    &.blue{
@@ -59,12 +75,36 @@ svg.scroll-cta{
       color: $white;
       h3{
          font-size: 6.4rem;
+         @media screen and ($bp-smaller-than-tablet){
+            font-size: 3.6rem;
+         }
       }
       p{
          font-size: 24px;
          font-weight: 500;
-         font-weight: 700;
       }
+   }
+   &.flex-centered{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      justify-content: space-between;
    }
 }
 
@@ -72,3 +112,38 @@ svg.scroll-cta{
    text-align: center;
 }
 //Text Panel
+
+//Logo Slider
+.flex-slider{
+   width: 100%;
+   margin: 40px 0;
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+   -webkit-justify-content: center;
+   -moz-justify-content: center;
+   -ms-justify-content: center;
+   -o-justify-content: center;
+   justify-content: center;
+   i.fa{
+      font-size: 64px;
+      margin: 0 40px;
+      line-height: 74px;
+   }
+}
+
+.indiv-logo{
+   display: inline-block;
+   height: 80px;
+   width: 80px;
+   margin: 0 20px;
+   background-color: $grey;
+   &.drop{
+      @media screen and ($bp-smaller-than-tablet){
+         display: none;
+      }
+   }
+}
+//Logo Slider

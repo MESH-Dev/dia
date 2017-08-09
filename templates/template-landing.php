@@ -1,9 +1,9 @@
 <?php /*
-* Template Name: Homepage
+* Template Name: Landing Page
 */
 get_header(); ?>
 <main id="main" class="site-main" role="main">
-   <div class="hero">
+   <div class="hero interior">
       <svg class="main-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2746.58 4104">
         <defs>
           <style>
@@ -32,125 +32,75 @@ get_header(); ?>
           </g>
         </g>
       </svg>
-      <h3><?php the_field('main_intro_text'); ?></h3>
-      <svg class="scroll-cta" viewBox="0 0 48 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <title>Fill 2</title>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <path d="M6.35422721,0.70556536 L24.030306,18.343133 L41.7063846,0.705565354 L41.7063846,0.705565354 C42.0970331,0.315767963 42.7296034,0.316112879 43.1198266,0.706336049 L47.3535052,4.94001454 L47.3535052,4.94001453 C47.7440295,5.33053881 47.7440295,5.96370379 47.3535052,6.35422809 C47.3535052,6.35422809 47.3535052,6.3542281 47.3535052,6.3542281 L24.7374128,28.9703205 L24.7374128,28.9703205 C24.3468885,29.3608448 23.7137235,29.3608448 23.3231992,28.9703205 L0.707106781,6.35422809 L0.707106784,6.35422809 C0.316582493,5.9637038 0.316582492,5.33053882 0.707106781,4.94001453 L4.9407852,0.706336074 L4.9407852,0.706336074 C5.33100838,0.316112892 5.96357871,0.315767967 6.35422721,0.70556536 Z" id="Fill-2" fill="#FFFFFF"></path>
-          </g>
-      </svg>
+      <h2>News and Events</h2>
       <div class="bg-image"></div>
    </div>
-   <div class="text-panel white">
-      <div class="container">
-         <div class="row">
-            <div class="columns-6">
-               <h2><?php the_field('intro_section_title'); ?></h2>
-            </div>
-            <div class="columns-6">
-               <p><?php the_field('intro_section_content'); ?></p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="text-panel blue">
-      <div class="container">
-         <div class="row">
-            <h2 class="centered-heading"><?php the_field('industry_section_title'); ?></h2>
-            <?php if( have_rows('industry_section_content') ): ?>
-               <?php while( have_rows('industry_section_content') ): the_row(); ?>
-                  <div class="columns-6">
-                     <p><?php the_sub_field('industry_section_column_1'); ?></p>
-                  </div>
-                  <div class="columns-6">
-                     <p><?php the_sub_field('industry_section_column_2'); ?></p>
-                  </div>
-               <?php endwhile; ?>
-         <?php endif; ?>
-         </div>
-      </div>
-   </div>
-   <div class="text-panel white">
-      <div class="container">
-         <div class="row">
-            <div class="columns-8">
-               <h2>Call-out for the survey right here.</h2>
-            </div>
-            <div class="columns-4">
-               <p>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. »
-                  <!-- <i class="fa fa-angle-double-right" aria-hidden="true"></i> -->
-               </p>
-            </div>
-            <div class="button">
-               <span class="button-text">Join Now</span>
-            </div>
-            <div class="bg-image"></div>
-         </div>
-      </div>
-   </div>
-   <!-- <div class="text-panel white flex-centered"> -->
-      <!-- <div class="row">
-         <div class="columns-8">
-            <h3>Callout for the survey right here.</h3>
+   <div class="events-container">
+      <div class="events row">
+         <div class="columns-4">
+            <a href="" class="event-card">
+               <div class="event-info">
+                  <h4>Event Title</h4>
+                  <p class="byline">By John Newsome on July 15, 2017</p>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p>Read More »</p>
+               </div>
+            </a>
          </div>
          <div class="columns-4">
-            <p>Be a part of a state network working hard to put West Virginia back on the map »</p>
-            <div class="button">
-               <span class="button-text">Join</span>
-            </div>
+            <a href="" class="event-card">
+               <div class="event-info">
+                  <h4>Event Title</h4>
+                  <p class="byline">By John Newsome on July 15, 2017</p>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p>Read More »</p>
+               </div>
+            </a>
          </div>
-      </div> -->
-      <!-- <h4 class="centered-heading">These people are working with us.</h4>
-      <div class="flex-slider">
-         <i class="fa fa-caret-left" aria-hidden="true"></i>
-         <div class="indiv-logo">
-
-         </div>
-         <div class="indiv-logo">
-
-         </div>
-         <div class="indiv-logo">
-
-         </div>
-         <div class="indiv-logo drop">
-
-         </div>
-         <div class="indiv-logo drop">
-
-         </div>
-         <div class="indiv-logo drop">
-
-         </div>
-         <i class="fa fa-caret-right" aria-hidden="true"></i>
-      </div>
-      <div class="button">
-         <span class="button-text">Learn More</span>
-      </div> -->
-   <!-- </div> -->
-   <div class="text-panel bg-image-blue">
-      <div class="container">
-         <div class="row">
-            <div class="columns-6">
-               <h3>Are you a West Virginia defense contractor?</h3>
-            </div>
-            <div class="columns-6">
-               <form class="email-signup">
-                  <div class="row">
-                     <div class="columns-6">
-                        <input type="text" name="first-name" value="" placeholder="First Name">
-                     </div>
-                     <div class="columns-6">
-                        <input type="text" name="last-name" value="" placeholder="Last Name">
-                     </div>
-                  </div>
-                  <input type="email" name="" value="" placeholder="Email">
-                  <input type="text" name="" value="" placeholder="Company Name">
-                  <label for="submit"><input type="submit" name="submit" value="Submit"><i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
-               </form>
-            </div>
+         <div class="columns-4">
+            <a href="" class="event-card">
+               <div class="event-info">
+                  <h4>Event Title</h4>
+                  <p class="byline">By John Newsome on July 15, 2017</p>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p>Read More »</p>
+               </div>
+            </a>
          </div>
       </div>
-      <div class="bg-image"></div>
+      <div class="events row">
+         <div class="columns-4">
+            <a href="" class="event-card">
+               <div class="event-info">
+                  <h4>Event Title</h4>
+                  <p class="byline">By John Newsome on July 15, 2017</p>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p>Read More »</p>
+               </div>
+            </a>
+         </div>
+         <div class="columns-4">
+            <a href="" class="event-card">
+               <div class="event-info">
+                  <h4>Event Title</h4>
+                  <p class="byline">By John Newsome on July 15, 2017</p>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p>Read More »</p>
+               </div>
+            </a>
+         </div>
+         <div class="columns-4">
+            <a href="" class="event-card">
+               <div class="event-info">
+                  <h4>Event Title</h4>
+                  <p class="byline">By John Newsome on July 15, 2017</p>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <p>Read More »</p>
+               </div>
+            </a>
+         </div>
+      </div>
    </div>
+
 </main>
 <?php get_footer(); ?>

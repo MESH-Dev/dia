@@ -18,7 +18,18 @@
       margin: 4rem 0;
    }
    @media screen and ($bp-smaller-than-desktop){
-      padding: 80px 40px 20px 40px;
+      padding: 40px 40px 20px 40px;
+   }
+   &.interior{
+      background-color: $red-rgba;
+      padding: 60px 80px 20px 80px;
+      h2{
+         font-size: 4.6rem;
+         margin: 2rem;
+      }
+      svg.main-logo{
+         height: 100px;
+      }
    }
    // @media screen and ($bp-smaller-than-mobile){
    // }
@@ -147,3 +158,80 @@ svg.scroll-cta{
    }
 }
 //Logo Slider
+
+//Content Cards
+a.event-card{
+   display: block;
+   position: relative;
+   height: 400px;
+   background-image: url(https://source.unsplash.com/random?technology);
+   background-size: cover;
+   // &::before{
+   //    content: '';
+   //    position: absolute;
+   //    top: 0;
+   //    bottom: 0;
+   //    left: 0;
+   //    right: 0;
+   //    background-color: #4472C4;
+   //    opacity: 0;
+   //    transition: opacity 0.1s ease-in-out;
+   // }
+   // &:hover{
+   //    &::before{
+   //       opacity: 1;
+   //    }
+   // }
+   &:hover{
+      text-decoration: none;
+      .event-info h4::after{
+         right: 0;
+      }
+   }
+}
+
+// a.card-link{
+//    &:hover{
+//       text-decoration: none;
+//    }
+// }
+
+.event-info{
+   position: absolute;
+   background-color: $blue;
+   color: $white;
+   padding: 20px;
+   bottom: 0;
+   width: 100%;
+   // a{
+   //    color: $white;
+   //    font-size: 2rem;
+   // }
+   h4{
+      font-size: 3.6rem;
+      position: relative;
+      &::after{
+         content: '';
+         height: 4px;
+         bottom: -4px;
+         left: 0;
+         right: 100%;
+         position: absolute;
+         background-color: $white;
+         transition: right 0.25s ease-in-out;
+      }
+   }
+}
+
+.byline{
+   font-size: 1.6rem;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.row{
+   &.events{
+      padding: 20px 0;
+   }
+}
+//Content Cards

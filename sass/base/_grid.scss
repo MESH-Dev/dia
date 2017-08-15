@@ -65,21 +65,22 @@ $max-width: 1200px;
 .offset-by-12 { margin-left: grid-column-width(12); }
 
 
+.row:not(.cards-container){
+   [class*='columns-'] {
+   	float: left;
+   	padding-right: $pad;
 
-[class*='columns-'] {
-	float: left;
-	padding-right: $pad;
+   	.row &:last-of-type {
+   		padding-right: 0;
+   	}
 
-	.row &:last-of-type {
-		padding-right: 0;
-	}
+   	@media(max-width: 960px) {
+   	    width: 100%;
+   	    padding: 0;
 
-	@media(max-width: 960px) {
-	    width: 100%;
-	    padding: 0;
+   	}
 
-	}
-
+   }
 }
 
 [class*='offset-by-'] {

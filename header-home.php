@@ -48,7 +48,8 @@
 
 	<header>
 		<!-- <div class="container"> -->
-			<div class="hero interior">
+			<div class="hero">
+				<!-- <a id="menuButton">Menu</a> -->
 				<nav class="main-navigation">
 					<?php if(has_nav_menu('main_nav')){
 								$defaults = array(
@@ -101,12 +102,49 @@
 					 </g>
 				  </g>
 				</svg>
-				<h2><?php the_title() ?></h2>
+				<h3><?php the_field('main_intro_text'); ?></h3>
+				<svg class="scroll-cta" viewBox="0 0 48 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					 <title>Fill 2</title>
+					 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						  <path d="M6.35422721,0.70556536 L24.030306,18.343133 L41.7063846,0.705565354 L41.7063846,0.705565354 C42.0970331,0.315767963 42.7296034,0.316112879 43.1198266,0.706336049 L47.3535052,4.94001454 L47.3535052,4.94001453 C47.7440295,5.33053881 47.7440295,5.96370379 47.3535052,6.35422809 C47.3535052,6.35422809 47.3535052,6.3542281 47.3535052,6.3542281 L24.7374128,28.9703205 L24.7374128,28.9703205 C24.3468885,29.3608448 23.7137235,29.3608448 23.3231992,28.9703205 L0.707106781,6.35422809 L0.707106784,6.35422809 C0.316582493,5.9637038 0.316582492,5.33053882 0.707106781,4.94001453 L4.9407852,0.706336074 L4.9407852,0.706336074 C5.33100838,0.316112892 5.96357871,0.315767967 6.35422721,0.70556536 Z" id="Fill-2" fill="#FFFFFF"></path>
+					 </g>
+				</svg>
 				<?php
-				$banner_image = get_field('banner_image');
+				$banner_image = get_field('main_banner_image');
 				$banner_url = $banner_image['sizes']["short-banner"];
 				?>
 				<div class="bg-image" style="background-image:url('<?php echo $banner_url; ?>')"></div>
 			</div>
+			<!-- <div class="columns-12"> -->
+				<div class="logo">
+					<!-- <h1 class="site-title"><a href="<//?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><//?php bloginfo( 'name' ); ?></a></h1> -->
+				</div>
+				<!-- <a id="menuButton">Menu</a> -->
+				<nav class="main-navigation">
+					<?php if(has_nav_menu('main_nav')){
+								$defaults = array(
+									'theme_location'  => 'main_nav',
+									'menu'            => 'main_nav',
+									'container'       => false,
+									'container_class' => '',
+									'container_id'    => '',
+									'menu_class'      => 'menu',
+									'menu_id'         => '',
+									'echo'            => true,
+									'fallback_cb'     => 'wp_page_menu',
+									'before'          => '',
+									'after'           => '',
+									'link_before'     => '',
+									'link_after'      => '',
+									'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'           => 0,
+									'walker'          => ''
+								); wp_nav_menu( $defaults );
+							}else{
+								echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
+							} ?>
+				</nav>
+			<!-- </div> -->
+
 		<!-- </div> -->
 	</header>

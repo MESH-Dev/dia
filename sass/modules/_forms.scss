@@ -31,6 +31,29 @@ input {
   }
 }
 
+textarea{
+   color: $deepblue;
+   font-weight: 700;
+   width: 100%;
+   border: 0px;
+   font-size: 2.4rem;
+   min-height: 44px;
+   height: 60px;
+   margin: 10px 0;
+   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+     color: $deepblue;
+   }
+   &::-moz-placeholder { /* Firefox 19+ */
+     color: $deepblue;
+   }
+   &:-ms-input-placeholder { /* IE 10+ */
+     color: $deepblue;
+   }
+   &:-moz-placeholder { /* Firefox 18- */
+     color: $deepblue;
+   }
+}
+
 
 textarea,
 select {
@@ -110,3 +133,20 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal;
 }
+
+//Content Submisstion Form
+.content-form{
+   input[type="email"],
+     input[type="number"],
+     input[type="search"],
+     input[type="text"],
+     input[type="tel"],
+     input[type="url"],
+     input[type="password"], textarea{
+      background-color: $lightgrey;
+   }
+   input[type="submit"]{
+      color: $deepblue;
+   }
+}
+//Content Submisstion Form

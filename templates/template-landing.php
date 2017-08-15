@@ -3,7 +3,7 @@
 */
 get_header(); ?>
 <main id="main" class="site-main" role="main">
-   <div class="hero interior">
+   <!-- <div class="hero interior">
       <svg class="main-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2746.58 4104">
         <defs>
           <style>
@@ -32,75 +32,63 @@ get_header(); ?>
           </g>
         </g>
       </svg>
-      <h2>News and Events</h2>
-      <div class="bg-image"></div>
-   </div>
-   <div class="events-container">
-      <div class="events row">
-         <div class="columns-4">
-            <a href="" class="event-card">
-               <div class="event-info">
-                  <h4>Event Title</h4>
-                  <p class="byline">By John Newsome on July 15, 2017</p>
-                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                  <p>Read More »</p>
+      <h2><//?php the_title() ?></h2>
+      <//?php
+      $banner_image = get_field('banner_image');
+      $banner_url = $banner_image['sizes']["short-banner"];
+      ?>
+      <div class="bg-image" style="background-image:url('<//?php echo $banner_url; ?>')"></div>
+   </div> -->
+   <div class="cards-container">
+      <?php if( get_field('cta_display') ): ?>
+      <div class="text-panel white">
+         <div class="container">
+            <div class="row">
+               <div class="columns-8">
+                  <h2><?php the_field('cta_title'); ?></h2>
                </div>
-            </a>
-         </div>
-         <div class="columns-4">
-            <a href="" class="event-card">
-               <div class="event-info">
-                  <h4>Event Title</h4>
-                  <p class="byline">By John Newsome on July 15, 2017</p>
-                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                  <p>Read More »</p>
+               <div class="columns-4">
+                  <p class="survey desc"><?php the_field('cta_desc'); ?></p>
+                  <a href="<?php the_field('cta_link'); ?>" class="button">
+                     <span class="button-text">Submit a Story</span>
+                  </a>
                </div>
-            </a>
-         </div>
-         <div class="columns-4">
-            <a href="" class="event-card">
-               <div class="event-info">
-                  <h4>Event Title</h4>
-                  <p class="byline">By John Newsome on July 15, 2017</p>
-                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                  <p>Read More »</p>
-               </div>
-            </a>
+            </div>
          </div>
       </div>
-      <div class="events row">
-         <div class="columns-4">
-            <a href="" class="event-card">
+   <?php endif; ?>
+      <?php if( have_rows('content_block') ):
+         $ctr = 1;
+         ?>
+      <!-- <div class="events row"> -->
+      <?php while( have_rows('content_block') ): the_row(); ?>
+         <?php
+         $thumbnails = get_sub_field('content_block_image');
+         // var_dump($thumbnails);
+         $thumb_url = $thumbnails['sizes']["large"];
+         if($ctr%3 == 1){
+            echo '<div class="cards row">';
+         }
+         ?>
+         <div class="columns-4 cards">
+            <a style="background-image:url('<?php echo $thumb_url ?>')" href="<?php the_sub_field('content_block_link'); ?>" class="event-card">
                <div class="event-info">
-                  <h4>Event Title</h4>
-                  <p class="byline">By John Newsome on July 15, 2017</p>
-                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  <h4><?php the_sub_field('content_block_title'); ?></h4>
+                  <p class="byline"><?php the_sub_field('content_block_byline'); ?></p>
+                  <p><?php the_sub_field('content_block_excerpt'); ?></p>
                   <p>Read More »</p>
                </div>
             </a>
          </div>
-         <div class="columns-4">
-            <a href="" class="event-card">
-               <div class="event-info">
-                  <h4>Event Title</h4>
-                  <p class="byline">By John Newsome on July 15, 2017</p>
-                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                  <p>Read More »</p>
-               </div>
-            </a>
-         </div>
-         <div class="columns-4">
-            <a href="" class="event-card">
-               <div class="event-info">
-                  <h4>Event Title</h4>
-                  <p class="byline">By John Newsome on July 15, 2017</p>
-                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                  <p>Read More »</p>
-               </div>
-            </a>
-         </div>
-      </div>
+      <?php
+      if($ctr%3 == 0) { echo '</div>';}
+      $ctr++;
+      endwhile;
+      $ctr = $ctr-1;
+      if($ctr%3 != 0) { echo '</div>';}
+      ?>
+      <?php endif; ?>
+      <!-- </div> -->
    </div>
-
 </main>
 <?php get_footer(); ?>

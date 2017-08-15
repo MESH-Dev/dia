@@ -1,21 +1,30 @@
 footer{
-   background-color: $deepblue;
+   clear: both;
+   // background-color: $deepblue;
    color: $white;
-   padding: 2rem;
+   // padding: 2rem;
    p{
       margin: 0px;
    }
 }
 
+.sub-footer{
+   background-color: $deepblue;
+   padding: 20px 0;
+}
+
 .footer-left{
+   text-align: left;
    a{
       color: $white;
       text-decoration: underline;
    }
-   text-align: left;
    .copyright{
       color: $lightgrey;
       font-size: 12px;
+   }
+   @media screen and (max-width: 960px){
+      text-align: center;
    }
 }
 
@@ -30,8 +39,28 @@ footer{
          color: $blue;
       }
    }
+   @media screen and (max-width: 960px){
+      text-align: center;
+   }
 }
 
 .socials{
    margin: 10px 0;
+}
+
+.text-panel{
+   &.bg-image-blue{
+      background-color: $blue-rgba;
+      color: $white;
+      h3{
+         font-size: 6.4rem;
+         @media screen and ($bp-smaller-than-tablet){
+            font-size: 3.6rem;
+         }
+      }
+      p{
+         font-size: 24px;
+         font-weight: 500;
+      }
+   }
 }

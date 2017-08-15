@@ -5,7 +5,7 @@
    background-color: $red-rgba;
    overflow: hidden;
    position: relative;
-   padding: 80px 80px 20px 80px;
+   padding: 40px 80px 20px 80px;
    // overflow: hidden;
    // .hero-filter{
    //    position: absolute;
@@ -17,12 +17,12 @@
    h3{
       margin: 4rem 0;
    }
-   @media screen and ($bp-smaller-than-desktop){
-      padding: 40px 40px 20px 40px;
-   }
+   // @media screen and ($bp-smaller-than-desktop){
+   //    padding: 80px 40px 20px 40px;
+   // }
    &.interior{
       background-color: $red-rgba;
-      padding: 60px 80px 20px 80px;
+      padding: 40px 80px 20px 80px;
       h2{
          font-size: 4.6rem;
          margin: 2rem;
@@ -38,7 +38,8 @@
 .bg-image{
    position: absolute;
    z-index: -1;
-   background-image: url(img/621903024.jpg);
+   // background-image: url(img/621903024.jpg);
+   background-size: cover;
    top: 0;
    left: 0;
    right: 0;
@@ -81,20 +82,6 @@ svg.scroll-cta{
       background-color: $blue;
       color: $white;
    }
-   &.bg-image-blue{
-      background-color: $blue-rgba;
-      color: $white;
-      h3{
-         font-size: 6.4rem;
-         @media screen and ($bp-smaller-than-tablet){
-            font-size: 3.6rem;
-         }
-      }
-      p{
-         font-size: 24px;
-         font-weight: 500;
-      }
-   }
    &.flex-centered{
       display: -webkit-flex;
       display: -moz-flex;
@@ -116,6 +103,15 @@ svg.scroll-cta{
       -ms-justify-content: space-between;
       -o-justify-content: space-between;
       justify-content: space-between;
+   }
+   .desc{
+      font-size: 2rem;
+      &.survey{
+         color: $red;
+      }
+      &.article{
+         color: $white;
+      }
    }
 }
 
@@ -160,12 +156,50 @@ svg.scroll-cta{
 //Logo Slider
 
 //Content Cards
+.cards-container{
+   max-width: 1440px;
+   margin: 0 auto;
+   padding-top: 40px;
+   .text-panel{
+      padding-top: 40px;
+   }
+   .row{
+      // margin-bottom: 40px;
+      &.cards{
+         margin-bottom: 40px;
+         @media screen and (max-width: 960px){
+            margin-bottom: auto;
+         }
+      }
+      [class*='columns-'] {
+      	float: left;
+      	padding-right: $pad;
+
+         &:nth-of-type(3) {
+            padding-right: 0;
+         }
+
+      	@media(max-width: 960px) {
+      	    width: 100%;
+      	    padding: 0;
+
+      	}
+
+      }
+   }
+}
+
+// .columns-4.cards{
+//    padding: 0;
+// }
+
 a.event-card{
    display: block;
    position: relative;
-   height: 400px;
-   background-image: url(https://source.unsplash.com/random?technology);
+   height: 500px;
+   // background-image: url(https://source.unsplash.com/random?technology);
    background-size: cover;
+   // margin: 40px 10px 0px 10px;
    // &::before{
    //    content: '';
    //    position: absolute;
@@ -228,10 +262,19 @@ a.event-card{
    font-weight: 700;
    text-transform: uppercase;
 }
+//Content Cards
 
-.row{
-   &.events{
-      padding: 20px 0;
+//Text Template
+.content-area{
+   padding: 80px 40px;
+   .left-column{
+      img{
+         margin: 0 auto;
+         display: block;
+      }
+   }
+   p{
+      color: #9B9B9B;
    }
 }
-//Content Cards
+//Text Template

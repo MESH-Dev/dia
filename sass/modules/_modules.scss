@@ -30,9 +30,19 @@
       svg.main-logo{
          height: 100px;
       }
+      @media screen and (max-width: 960px){
+         padding: 0px 80px 20px 80px;
+      }
+      @media screen and ($bp-smaller-than-mobile){
+         padding: 0px 20px 20px 20px;
+      }
    }
-   // @media screen and ($bp-smaller-than-mobile){
-   // }
+   @media screen and (max-width: 960px){
+      padding: 0px 80px 20px 80px;
+   }
+   @media screen and ($bp-smaller-than-mobile){
+      padding: 0px 20px 20px 20px;
+   }
 }
 
 .bg-image{
@@ -51,7 +61,6 @@ svg.main-logo{
    height: 215px;
    @media screen and ($bp-smaller-than-mobile){
       height: 170px;
-      margin-top: 140px;
    }
 }
 
@@ -197,8 +206,8 @@ a.event-card{
    display: block;
    position: relative;
    height: 500px;
-   // background-image: url(https://source.unsplash.com/random?technology);
    background-size: cover;
+   background-position: center;
    // margin: 40px 10px 0px 10px;
    // &::before{
    //    content: '';
@@ -271,10 +280,17 @@ a.event-card{
       img{
          margin: 0 auto;
          display: block;
+         @media screen and ($bp-smaller-than-mobile){
+            width: 100%;
+            height: auto;
+         }
       }
    }
    p{
       color: #9B9B9B;
+   }
+   h1, h2, h3{
+      color: $deepblue;
    }
 }
 //Text Template

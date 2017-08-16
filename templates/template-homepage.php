@@ -43,7 +43,7 @@ get_header('home'); ?>
       $banner_image = get_field('main_banner_image');
       $banner_url = $banner_image['sizes']["short-banner"];
       ?>
-      <div class="bg-image" style="background-image:url('<?php echo $banner_url; ?>')"></div>
+      <div class="bg-image" style="background-image:url('<//?php echo $banner_url; ?>')"></div>
    </div> -->
    <div class="text-panel white">
       <div class="container">

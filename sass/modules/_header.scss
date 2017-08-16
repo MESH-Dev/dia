@@ -5,7 +5,20 @@
    text-align: center;
    z-index: 2;
    @media screen and (max-width: 960px){
-      top: 44px;
+      margin-bottom: 0;
+   }
+   &.open{
+      ul{
+         height: auto;
+         li{
+            height: auto;
+            margin: 10px 0;
+            a{
+               height: 44px;
+               visibility: visible;
+            }
+         }
+      }
    }
    ul{
       display: inline-block;
@@ -17,43 +30,29 @@
          display: inline-block;
          color: $white;
          margin: 0 20px;
-         // &:nth-of-type(2){
-         //    margin-right: 12%;
-         //    @media screen and ($bp-larger-than-desktophd){
-         //       margin-right: 170px;
-         //    }
-         //    @media screen and ($bp-smaller-than-tablet){
-         //       margin-right: 20px;
-         //    }
-         // }
-         // &:nth-of-type(3){
-         //    margin-left: 12%;
-         //    @media screen and ($bp-larger-than-desktophd){
-         //       margin-left: 170px;
-         //    }
-         //    @media screen and ($bp-smaller-than-tablet){
-         //       margin-left: 20px;
-         //    }
-         // }
-         @media screen and ($bp-smaller-than-mobile){
-            margin: 20px 0;
-            width: 100%;
+         // transition: all 0.25s ease-in-out;
+         @media screen and (max-width: 960px){
             display: block;
-            // &:nth-of-type(2){
-            //    margin-right: auto;
-            // }
-            // &:nth-of-type(3){
-            //    margin-left: auto;
-            // }
+            width: 100%;
+            margin: 0;
          }
+         // @media screen and ($bp-smaller-than-mobile){
+         //    width: 100%;
+         //    display: block;
+         // }
          a{
             color: $white;
             font-weight: 700;
             text-transform: uppercase;
-            transition: opacity 0.2s ease-in-out;
             &:hover{
                text-decoration: none;
                opacity: 0.8;
+            }
+            @media screen and (max-width: 960px){
+               height: 0px;
+               visibility: hidden;
+               line-height: 44px;
+               display: block;
             }
          }
       }
@@ -62,10 +61,6 @@
 
 #menuButton{
    display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
    height: 44px;
    line-height: 44px;
    color: $white;

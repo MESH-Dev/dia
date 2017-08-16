@@ -49,7 +49,8 @@
 	<header>
 		<!-- <div class="container"> -->
 			<div class="hero interior">
-				<nav class="main-navigation">
+				<a id="menuButton">Menu</a>
+				<nav id="mainNav" class="main-navigation">
 					<?php if(has_nav_menu('main_nav')){
 								$defaults = array(
 									'theme_location'  => 'main_nav',

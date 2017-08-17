@@ -102,7 +102,15 @@
 					 </g>
 				  </g>
 				</svg>
-				<h2><?php the_title() ?></h2>
+				<h2><?php
+				if ( ! empty ( $post->post_parent ) )
+				{
+				    $parent_title = get_the_title($post->post_parent);
+				    echo $parent_title;
+				} else{
+					the_title();
+				}
+				?></h2>
 				<?php
 				$banner_image = get_field('banner_image');
 				$banner_url = $banner_image['sizes']["short-banner"];

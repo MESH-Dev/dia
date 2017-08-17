@@ -9,7 +9,13 @@
 			<div class="columns-6">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-					<!-- <h1><//?php the_title(); ?></h1> -->
+					<?php
+					if ( ! empty ( $post->post_parent ) )
+					{
+						$current_title = get_the_title();
+					    echo "<h1>$current_title</h1>";
+					}
+					?>
 
 					<?php the_content(); ?>
 

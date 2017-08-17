@@ -277,13 +277,16 @@ a.event-card{
 .content-area{
    padding: 80px 40px;
    .left-column{
+      position: relative;
       img{
          margin: 0 auto;
          display: block;
-         @media screen and ($bp-smaller-than-mobile){
-            width: 100%;
-            height: auto;
-         }
+         max-width: 100%;
+         height: auto;
+         // @media screen and ($bp-smaller-than-mobile){
+         //    width: 100%;
+         //    height: auto;
+         // }
       }
    }
    p{
@@ -294,3 +297,12 @@ a.event-card{
    }
 }
 //Text Template
+
+//Posts
+.post{
+   padding: 40px;
+   h1{
+      color: $deepblue;
+   }
+}
+//Posts

@@ -29,6 +29,15 @@
 	  })(document);
 	</script>
 
+	<script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=ukiahtvkgtlv6vpfhwkd5a';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
+
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />

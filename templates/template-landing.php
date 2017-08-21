@@ -46,7 +46,7 @@ get_header(); ?>
                   <h4><?php the_sub_field('content_block_title'); ?></h4>
                   <p class="byline"><?php the_sub_field('content_block_byline'); ?></p>
                   <p><?php the_sub_field('content_block_excerpt'); ?></p>
-                  <p>Read More »</p>
+                  <!-- <p>Read More »</p> -->
                </div>
             </a>
          </div>

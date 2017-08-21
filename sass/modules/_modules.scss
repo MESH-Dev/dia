@@ -3,23 +3,13 @@
    color: $white;
    text-align: center;
    background-color: $red-rgba;
+   background-blend-mode: multiply;
    overflow: hidden;
    position: relative;
    padding: 40px 80px 20px 80px;
-   // overflow: hidden;
-   // .hero-filter{
-   //    position: absolute;
-   //    top: 0;
-   //    bottom: 0;
-   //    left: 0;
-   //    right: 0;
-   // }
    h3{
       margin: 4rem 0;
    }
-   // @media screen and ($bp-smaller-than-desktop){
-   //    padding: 80px 40px 20px 40px;
-   // }
    &.interior{
       background-color: $red-rgba;
       padding: 40px 80px 20px 80px;
@@ -48,7 +38,6 @@
 .bg-image{
    position: absolute;
    z-index: -1;
-   // background-image: url(img/621903024.jpg);
    background-size: cover;
    top: 0;
    left: 0;
@@ -171,6 +160,15 @@ svg.scroll-cta{
    padding-top: 40px;
    .text-panel{
       padding-top: 40px;
+      &.white{
+         @media screen and (max-width: 960px){
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+      }
+   }
+   @media screen and (max-width: 960px){
+      padding: 0 20px;
    }
    .row{
       // margin-bottom: 40px;
@@ -198,46 +196,22 @@ svg.scroll-cta{
    }
 }
 
-// .columns-4.cards{
-//    padding: 0;
-// }
-
 a.event-card{
    display: block;
    position: relative;
    height: 500px;
    background-size: cover;
    background-position: center;
-   // margin: 40px 10px 0px 10px;
-   // &::before{
-   //    content: '';
-   //    position: absolute;
-   //    top: 0;
-   //    bottom: 0;
-   //    left: 0;
-   //    right: 0;
-   //    background-color: #4472C4;
-   //    opacity: 0;
-   //    transition: opacity 0.1s ease-in-out;
-   // }
-   // &:hover{
-   //    &::before{
-   //       opacity: 1;
-   //    }
-   // }
    &:hover{
       text-decoration: none;
       .event-info h4::after{
          right: 0;
       }
    }
+   @media screen and (max-width: 960px){
+      margin-bottom: 10px;
+   }
 }
-
-// a.card-link{
-//    &:hover{
-//       text-decoration: none;
-//    }
-// }
 
 .event-info{
    position: absolute;
@@ -246,10 +220,6 @@ a.event-card{
    padding: 20px;
    bottom: 0;
    width: 100%;
-   // a{
-   //    color: $white;
-   //    font-size: 2rem;
-   // }
    h4{
       font-size: 3.6rem;
       position: relative;

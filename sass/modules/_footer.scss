@@ -18,6 +18,9 @@ footer{
    a{
       color: $white;
       text-decoration: underline;
+      &:hover{
+         text-decoration: none;
+      }
    }
    .copyright{
       color: $lightgrey;
@@ -33,6 +36,18 @@ footer{
    svg{
       height: 24px;
       margin-left: 20px;
+      path{
+         transition: fill 0.2s ease-in-out;
+      }
+      @media screen and (max-width: 960px){
+         margin-left: 10px;
+         margin-right: 10px;
+      }
+      &:hover{
+         path{
+            fill: $red;
+         }
+      }
    }
    p{
       a{
@@ -51,6 +66,7 @@ footer{
 .text-panel{
    &.bg-image-blue{
       background-color: $blue-rgba;
+      background-blend-mode: multiply;
       color: $white;
       h3{
          font-size: 6.4rem;

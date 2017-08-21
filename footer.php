@@ -9,19 +9,6 @@
 				</div>
 				<div class="columns-6">
 					<?php the_field('global_contact_form', 'option'); ?>
-					<!-- <form class="email-signup">
-						<div class="row">
-							<div class="columns-6">
-								<input type="text" name="first-name" value="" placeholder="First Name">
-							</div>
-							<div class="columns-6">
-								<input type="text" name="last-name" value="" placeholder="Last Name">
-							</div>
-						</div>
-						<input type="email" name="" value="" placeholder="Email">
-						<input type="text" name="" value="" placeholder="Company Name">
-						<label for="submit"><input type="submit" name="submit" value="Submit"><i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
-					</form> -->
 				</div>
 			</div>
 		</div>
@@ -35,12 +22,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="footer-left columns-6">
-					<p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-					<p>Phone: 777-888-1231</p>
-					<p class="copyright">&#169; Defense Industry Alliance</p>
+					<p>Email: <a href="mailto:info@techconnectwv.com">info@techconnectwv.com</a></p>
+					<p>Phone: 304-444-2918</p>
+					<p class="copyright">&#169; Defense Industry Alliance <?php echo date("Y"); ?></p>
 				</div>
 				<div class="footer-right columns-6">
-					<div class="socials">
+					<!-- <div class="socials">
 						<a href="twitter.com">
 							<svg viewBox="0 0 38 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <title>Twitter</title>
@@ -57,7 +44,7 @@
 							    </g>
 							</svg>
 						</a>
-					</div>
+					</div> -->
 					<!-- <nav class="main-navigation">
 						<//?php wp_nav_menu( array('menu_id' => 'footer-menu', 'theme_location' => 'footer-menu') ); ?>
 					</nav> -->

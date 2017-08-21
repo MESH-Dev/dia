@@ -134,6 +134,17 @@ label > .label-body {
   font-weight: normal;
 }
 
+div[role="form"]{
+   span[role="alert"], div[role="alert"], span.wpcf7-not-valid-tip{
+      background-color: #eaeaea;
+      font-size: 1.6rem;
+      color: $red;
+      padding: 5px;
+      border: 0px;
+      margin: 0px;
+   }
+}
+
 //Content Submisstion Form
 .content-form{
    input[type="email"],

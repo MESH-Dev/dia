@@ -33,7 +33,7 @@ get_header(); ?>
          } else{
             $base_url = get_template_directory_uri();
             // $thumb_url = bloginfo('template_url') . '/img/621903024.jpg';
-            $thumb_url = $base_url . '/img/621903024.jpg';
+            $thumb_url = $base_url . '/img/325757744.jpg';
          }
          // var_dump($thumbnails);
          if($ctr%3 == 1){

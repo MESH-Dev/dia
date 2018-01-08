@@ -10,7 +10,7 @@ get_header('home'); ?>
                <h2><?php the_field('intro_section_title'); ?></h2>
             </div>
             <div class="columns-6">
-               <p><?php the_field('intro_section_content'); ?></p>
+              <?php the_field('intro_section_content'); ?>
             </div>
          </div>
       </div>

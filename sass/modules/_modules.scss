@@ -1,3 +1,11 @@
+.main-intro-text,
+.page-title{
+   font-size: 3.0rem;
+   font-weight: 700;
+   @media($bp-smaller-than-tablet){
+      font-size:3.6rem;
+   }
+}
 //Homepage Hero
 .hero{
    color: $white;
@@ -7,13 +15,13 @@
    overflow: hidden;
    position: relative;
    padding: 40px 80px 20px 80px;
-   h3{
+   .page-title,.main-intro-text{
       margin: 4rem 0;
    }
    &.interior{
       background-color: $red-rgba;
       padding: 40px 80px 20px 80px;
-      h2{
+      .page-title{
          font-size: 4.6rem;
          margin: 2rem;
       }
@@ -39,6 +47,7 @@
    position: absolute;
    z-index: -1;
    background-size: cover;
+   background-position:center center;
    top: 0;
    left: 0;
    right: 0;
@@ -196,13 +205,27 @@ svg.scroll-cta{
    }
 }
 
+.the-content{
+   a{
+      color:#4472C4;
+      font-weight:500;
+      &:hover,
+      &:focus,
+      &:active{
+         text-decoration:underline;
+      }
+   }
+}
+
 a.event-card{
    display: block;
    position: relative;
    height: 500px;
    background-size: cover;
    background-position: center;
-   &:hover{
+   &:hover,
+   &:active,
+   &:focus{
       text-decoration: none;
       .event-info h4::after{
          right: 0;
@@ -210,6 +233,10 @@ a.event-card{
    }
    @media screen and (max-width: 960px){
       margin-bottom: 20px;
+   }
+
+   @media screen and ($bp-smaller-than-tablet){
+      height:700px;
    }
 }
 
@@ -243,6 +270,18 @@ a.event-card{
 }
 //Content Cards
 
+//Archive Link
+.row{
+   &.archive-link-container{
+      text-align: center;
+      margin-bottom: 40px;
+      @media screen and (max-width: 960px){
+         margin-bottom: 20px;
+      }
+   }
+}
+//Archive Link
+
 //Text Template
 .content-area{
    padding: 80px 40px;
@@ -271,9 +310,97 @@ a.event-card{
 .post{
    .content-area{
       padding-top: 40px;
+      a{
+         color:#4472C4;
+         font-weight:500;
+            &:hover,
+            &:focus,
+            &:active{
+               text-decoration:underline;
+            }
+   }
    }
    h1{
       color: $deepblue;
    }
 }
-//Posts
+
+.content-form{
+   textarea{
+      height:200px;
+   }
+}
+
+.foh-oh-foh{
+   .the-content{
+      margin:5em 0;
+   }
+}
+
+//Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+p img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+p img.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+p img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+p img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}

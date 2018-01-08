@@ -60,5 +60,14 @@ get_header(); ?>
       <?php endif; ?>
       <!-- </div> -->
    </div>
+   <?php if( get_field('archive_link_display') ): ?>
+   <div class="container">
+      <div class="row archive-link-container">
+         <a href="<?php the_field('news_archive_link'); ?>" class="button">
+            <span class="button-text"><?php the_field('news_archive_button_text'); ?></span>
+         </a>
+      </div>
+   </div>
+   <?php endif; ?>
 </main>
 <?php get_footer(); ?>

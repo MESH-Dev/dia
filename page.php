@@ -7,19 +7,21 @@
 				<?php the_post_thumbnail( 'medium_large' ); ?>
 			</div>
 			<div class="columns-6">
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<div class="the-content">
+					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-					<?php
-					if ( ! empty ( $post->post_parent ) )
-					{
-						$current_title = get_the_title();
-					    echo "<h1>$current_title</h1>";
-					}
-					?>
+						<?php
+						if ( ! empty ( $post->post_parent ) )
+						{
+							$current_title = get_the_title();
+						    echo "<h1>$current_title</h1>";
+						}
+						?>
 
-					<?php the_content(); ?>
+						<?php the_content(); ?>
 
-				<?php endwhile; ?>
+					<?php endwhile; ?>
+				</div>
 			</div>
 
 			<!-- <div class="columns-3"> -->
